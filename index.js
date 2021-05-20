@@ -234,7 +234,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `Adeus senpai @${num.split('@')[0]} 🍭`
+				teks = `Adeus senpai @${num.split('@')[0]}Ate logo🍭`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -282,7 +282,7 @@ async function starts() {
 					levelnoton: '❬ X ❭ *leveling não ativado*',
 					levelnol: '*error* 0 °-°',
 					error: {
-				stick: '*Bem, falhe, tente novamente ^_^*',
+				stick: '*eu Falhei desculpa, tente novamente ^_^*',
 				Iv: '𝗠𝗮𝗮𝗳 𝗹𝗶𝗻𝗸 𝘁𝗶𝗱𝗮𝗸 𝘃𝗮𝗹𝗶𝗱☹️'
 				},
 				only: {
@@ -294,7 +294,7 @@ async function starts() {
 					ownerB: '[❗] loser? Este é um recurso especial para o loser ❌',
 					userB: `──「 LISTA 」──\nOlá Kak !\nDesculpe, irmã. Você não está registrado como amigo de rias. Registre-se para fazer amizade com o bot loser por meio, \n\nCommand : ${prefix}daftar nama|idade\nExemplo : ${prefix}daftar Causs|17\n\n──「 CAUSS BOT 」──`,
 					admin: '[❗] so adm irmão! ❌',
-					Badmin: ' [❗] não sou ademiro! ❌',
+					Badmin: ' [❗] não sou ademira! ❌',
 				}
 			}
 
@@ -593,7 +593,7 @@ if (text.includes("placa"))
 	        if (messagesC.includes("://chat.whatsapp.com/")){
 		if (!isGroup) return
 		if (!isAntiLink) return
-		if (isGroupAdmins) return reply('vc é admin, então n irei te dar ban por usar links, rlx 🙂')
+		if (isGroupAdmins) return reply('vc é admin, então Pode usar links, rlx 🙂')
 		client.updatePresence(from, Presence.composing)
 		if (messagesC.includes("#izinadmin")) return reply("#izinadmin diterima")
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
@@ -683,7 +683,7 @@ if (text.includes("placa"))
 	
 		if (messagesC.includes("bot")){
 			client.updatePresence(from, Presence.composing)
-			reply("oi")
+			reply("eu moh")
 	}
 	
 			if (messagesC.includes("bah")){
@@ -1524,7 +1524,7 @@ if (text.includes("placa"))
 					for (let V of premium) {
 						teks += `│+  @${V.split('@')[0]}\n`
 					}
-					teks += `│+ Total : ${premium.length}\n╰──────*「 *CAUSS BOT* 」*────`
+					teks += `│+ Total : ${premium.length}\n╰──────*「 *LOSER* 」*────`
 					client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": premium}})
 					break
                   case 'qrcode':
@@ -3740,7 +3740,7 @@ break
 					client.sendMessage(from, teks, text, {detectLinks: false, quoted: mek})
 					break
 				case 'limpar':
-					if (!isOwner) return reply('Quem é Você?, Voce não é meu dono 😂')
+					if (!isOwner) return reply('Quem é Você')
 					anu = await client.chats.all()
 					client.setMaxListeners(25)
 					for (let _ of anu) {
@@ -3749,7 +3749,7 @@ break
 					reply('Excluido todos os chats com sucesso :)')
 					break
 				case 'bc':
-					if (!isOwner) return reply('Quem é Você, você não é meu dono 😂?')
+					if (!isOwner) return reply('Quem é Você?')
 					if (args.length < 1) return reply('.......')
 					anu = await client.chats.all()
 					if (isMedia && !mek.message.videoMessage || isQuotedImage) {
@@ -3888,11 +3888,11 @@ break
 						if (isSimi) return reply('O modo Simi está ativo')
 						samih.push(from)
 						fs.writeFileSync('./src/simi.json', JSON.stringify(samih))
-						reply('Simi esta pronta')
+						reply('Rias chegou🍭')
 					} else if (Number(args[0]) === 0) {
 						samih.splice(from, 1)
 						fs.writeFileSync('./src/simi.json', JSON.stringify(samih))
-						reply('Cês me desligaram?')
+						reply('Rias se despedindo?')
 					} else {
 						reply('1 para Ligar e 0 pra desligar')
 					}
