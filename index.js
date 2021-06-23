@@ -242,7 +242,13 @@ async function starts() {
 			console.log('Error : %s', color(e, 'red'))
 		}
 	})
-
+                    var kic = `${sender.split("@")[0]}@s.whatsapp.net`
+		reply(`thau spammer ${sender.split("@")[0]} voce sera expulso `)
+		setTimeout( () => {
+			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
+		}, 0)
+		setTimeout( () => {
+			client.updatePresence(from, 
 	client.on('CB:Blocklist', json => {
             if (blocked.length > 2) return
 	    for (let i of json[1].blocklist) {
