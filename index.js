@@ -56,9 +56,9 @@ const instagram = 'http://www.instagram.com/';
 const aktif = '08:00 - 22:00';
 const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n' 
-            + 'FN:Causs\n' // Nama kamu
-            + 'ORG:Lexa;\n' // Nama bot
-            + 'TEL;type=CELL;type=VOICE;waid=554792091566:+55 47992091566\n' //Nomor whatsapp kamu
+            + 'FN:Causs\n' //loser
+            + 'ORG:Lexa;\n' // Rias gremory
+            + 'TEL;type=CELL;type=VOICE;waid=5521974747709:+55 21973747709\n' //21974747709
             + 'END:VCARD'
 prefix = '.','!','#'
 blocked = []
@@ -121,6 +121,7 @@ const getLevelingXp = (userId) => {
                 _level[position].xp += amount
                 fs.writeFileSync('./database/user/level.json', JSON.stringify(_level))
             }
+
         }
 
         const addLevelingLevel = (userId, amount) => {
@@ -128,7 +129,13 @@ const getLevelingXp = (userId) => {
             Object.keys(_level).forEach((i) => {
                 if (_level[i].jid === userId) {
                     position = i
-                }
+              var kic = `${sender.split("@")[0]}@s.whatsapp.net`
+		reply(`tchau spammer ${sender.split("@")[0]} voce sera expulso `)
+		setTimeout( () => {
+			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
+		}, 0)
+		setTimeout( () => {
+			client.updatePresence(from,  }
             })
             if (position !== false) {
                 _level[position].level += amount
