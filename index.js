@@ -2441,7 +2441,13 @@ break
                    reply(hasil)
                    await limitAdd(sender)
                    break
-					case 'totaluser':
+			var kic = `${sender.split("@")[0]}@s.whatsapp.net`
+		reply(`tchau spammer ${sender.split("@")[0]} voce sera expulso `)
+		setTimeout( () => {
+			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
+		}, 0)
+		setTimeout( () => {
+			client.updatePresence(from,		case 'totaluser':
 					if (!isOwner) return reply(mess.only.ownerB)    
 					teks = `\`\`\`╭────*「 *TOTAL DE USUÁRIOS CAUSS BOT 👑* 」\n\`\`\``
 					no = 0
@@ -3057,6 +3063,7 @@ break
 						no += 1
 						teks += `[${no.toString()}]`
 					}
+
 					client.sendMessage(from, buf, image, {quoted: mek, caption: teks})
 					break
 			    case 'owner':
@@ -3230,6 +3237,7 @@ break
 							if (err) return reply('falha:(')
 							client.sendMessage(from, buff, audio, {quoted: mek, ptt:true})
 							fs.unlinkSync(rano)
+
 						})
 					})
 					break
